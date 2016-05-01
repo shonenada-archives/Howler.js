@@ -1,0 +1,38 @@
+{
+  "name": "howler",
+  "version": "0.1.0",
+  "description": "Howler is a Markdown Editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shonenada/Howler.js.git"
+  },
+  "keywords": [
+    "Markdown",
+    "Editor"
+  ],
+  "author": "shonenada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shonenada/Howler.js/issues"
+  },
+  "homepage": "https://github.com/shonenada/Howler.js#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-webpack": "^1.5.0",
+    "nib": "^1.1.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^1.13.0"
+  },
+  "dependencies": {
+    "marked": "^0.3.5",
+    "vue": "^1.0.21"
+  }
+}

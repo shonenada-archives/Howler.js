@@ -1,2 +1,3 @@
-# editor.js
+# Howler.js
+
 Markdown Editor

@@ -2,7 +2,8 @@ import Vue from 'vue';
 
 const urls = {
   accountInfo: 'https://api.dropboxapi.com/1/account/info',
-  listFile: 'https://api.dropboxapi.com/1/metadata/auto/',
+  listFiles: 'https://api.dropboxapi.com/1/metadata/auto/',
+  loadFile: 'https://content.dropboxapi.com/1/files/auto/Howler.md',
   uploadContent: 'https://content.dropboxapi.com/1/files_put/auto/Howler.md',
 };
 
@@ -26,9 +27,15 @@ class APIService {
     }).then(success, error);
   }
 
-  listFile(success=defaultSuccess, error=defaultError) {
-    Vue.http.get(urls.listFile, {}, {
+  listFiles(success=defaultSuccess, error=defaultError) {
+    Vue.http.get(urls.listFiles, {}, {
       headers: { 'Authorization': `Bearer ${this.access_token}` }, 
+    }).then(success, error);
+  }
+
+  loadFile(success=defaultSuccess, error=defaultError) {
+    Vue.http.get(urls.loadFile, {}, {
+      headers: { 'Authorization': `Bearer ${this.access_token}` },
     }).then(success, error);
   }
 

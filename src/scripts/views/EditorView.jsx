@@ -24,8 +24,14 @@ const EditorView = Vue.extend({
         console.log(resp);
       });
     },
-    listFile: function() {
-      API.listFile(function(resp) {
+    listFiles: function() {
+      API.listFiles(function(resp) {
+        console.log(resp);
+      });
+    },
+    loadFile: function() {
+      API.loadFile((resp) => {
+        this.content = resp.data;
         console.log(resp);
       });
     },

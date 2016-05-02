@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import marked from 'marked';
-
+import API from 'scripts/services/APIService';
 import template from 'templates/editor.html';
 
 const EditorView = Vue.extend({
@@ -10,6 +10,7 @@ const EditorView = Vue.extend({
   },
   data: function() {
     return {
+      API: API,
       content: '',
     };
   },
@@ -17,7 +18,22 @@ const EditorView = Vue.extend({
   },
   ready: function() {
   },
-  methods: function() {
+  methods: {
+    info: function() {
+      API.getAccountInfo(function(resp) {
+        console.log(resp);
+      });
+    },
+    listFile: function() {
+      API.listFile(function(resp) {
+        console.log(resp);
+      });
+    },
+    upload: function() {
+      API.uploadFile(this.content, function(resp) {
+        console.log(resp);
+      });
+    },
   },
 });
 

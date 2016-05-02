@@ -1,0 +1,4 @@
+<div class="editor">
+  <textarea v-model="content" debounce="300"></textarea>
+  <div v-html="content | marked"></div>
+</div>

@@ -1,4 +1,5 @@
-var gulp = require('gulp'); var webpack = require('gulp-webpack');
+var gulp = require('gulp');
+var webpack = require('gulp-webpack');
 var plumber = require('gulp-plumber');
 var stylus = require('gulp-stylus');
 var path = require('path');
@@ -114,6 +115,9 @@ gulp.task('browser-sync', function() {
     open: false,
     server: { baseDir: [project.dist] },
   });
+});
+
+gulp.task('deploy', function() {
 });
 
 gulp.task('clean:dist', function(done) {
